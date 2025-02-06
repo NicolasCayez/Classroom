@@ -1,0 +1,115 @@
+<div
+  class="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+>
+  <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg">
+    <!-- En-tête du formulaire -->
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Bienvenue</h2>
+      <p class="text-sm text-gray-600 mb-8">
+        Connectez-vous pour accéder à votre dashboard et gérer vos activités
+      </p>
+    </div>
+
+    <!-- Formulaire -->
+    <form (ngSubmit)="login()" class="mt-8 space-y-6">
+      <div class="rounded-md shadow-sm space-y-4">
+        <!-- Email -->
+        <div>
+          <label for="email" class="sr-only">Email</label>
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <svg
+                class="h-5 w-5 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                />
+                <path
+                  d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                />
+              </svg>
+            </div>
+            <input
+              [(ngModel)]="email"
+              name="email"
+              id="email"
+              type="email"
+              required
+              class="appearance-none rounded-lg relative block w-full pl-10 pr-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              placeholder="Adresse email"
+            />
+          </div>
+        </div>
+
+        <!-- Mot de passe -->
+        <div>
+          <label for="password" class="sr-only">Mot de passe</label>
+          <div class="relative">
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <svg
+                class="h-5 w-5 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2-2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <input
+              [(ngModel)]="password"
+              name="password"
+              id="password"
+              type="password"
+              required
+              class="appearance-none rounded-lg relative block w-full pl-10 pr-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+              placeholder="Mot de passe"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Message d'erreur -->
+      <div class="text-center">
+        <p *ngIf="errorMessage" class="text-red-500 text-sm mb-4">
+          {{ errorMessage }}
+        </p>
+      </div>
+
+      <!-- Bouton de connexion -->
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+        >
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <svg
+              class="h-5 w-5 text-blue-500 group-hover:text-blue-400 transition-colors duration-200"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2-2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          Se connecter
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

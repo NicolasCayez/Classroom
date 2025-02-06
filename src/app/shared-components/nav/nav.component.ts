@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule,RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterModule,RouterLink, RouterLinkActive, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,5 +8,11 @@ import { RouterModule,RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
+  constructor(private router: Router) {}
+
+  logout() {
+    localStorage.removeItem('authToken'); // Remove authentication token
+    this.router.navigate(['/login']); // Redirect to login page
+  }
 
 }
