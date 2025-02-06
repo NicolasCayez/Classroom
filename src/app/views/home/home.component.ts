@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { LessonTeaserGroupComponent } from '../../shared-components/lessons/lesson-teaser-group/lesson-teaser-group.component';
+import { ModuleTeaserGroupComponent } from '../../shared-components/lessons/module-teaser-group/module-teaser-group.component';
+import { ModuleDetailBannerComponent } from "../../shared-components/lessons/module-detail-banner/module-detail-banner.component";
 
 @Component({
   selector: 'app-home',
-  imports: [LessonTeaserGroupComponent],
+  imports: [ModuleTeaserGroupComponent, ModuleDetailBannerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
