@@ -1,0 +1,9 @@
+.header-wrap{
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 10px 20px;
+}
+img{
+    width: 30%;
+    min-width: 250px;
+}

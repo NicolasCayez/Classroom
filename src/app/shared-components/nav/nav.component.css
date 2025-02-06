@@ -1,0 +1,27 @@
+ul li a {
+    text-decoration: none;
+    color: #0D47A1;
+}
+.search{
+    min-width: 240px;
+}
+.search input{
+    border: 1px #0D47A1 solid;
+    border-radius: 5px 0px 0px 5px;
+    height: 30px;
+
+}
+.search input:focus{
+    outline: 1px #0dcaf0 solid;
+    border-radius: 5px 0px 0px 5px;
+}
+.search button{
+    border-color: #0D47A1;
+    border-radius: 0px 5px 5px 0px;
+    height: 30px;
+    border-width: 1px 1px 1px 0px;
+}
+.search button:active{
+    outline: 1px #0dcaf0 solid;
+    border-radius: 0px 5px 5px 0px;
+}
