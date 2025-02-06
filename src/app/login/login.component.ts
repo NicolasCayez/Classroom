@@ -22,7 +22,7 @@ export class LoginComponent {
     // Simulated authentication (replace with API call)
     if (this.email === 'user@example.com' && this.password === 'password123') {
       localStorage.setItem('authToken', 'fake-jwt-token'); // Store authentication token
-      this.router.navigate(['/dashboard']); // Redirect to dashboard
+      this.router.navigate(['/tests']); // Redirect to tests
     } else {
       this.errorMessage = "Email ou mot de passe incorrect";
     }
