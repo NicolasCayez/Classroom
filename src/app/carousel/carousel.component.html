@@ -1,0 +1,19 @@
+<!-- <p>{{ carousel | json }}</p> -->
+
+<div class="slider">
+  <div class="carousel-item">
+    <img [src]="carousel[0].imageUrl" alt="">
+  </div>
+</div>
+
+<div class="center">
+  <swiper [config]="config">
+    <ng-container *ngFor="let slide of slides">
+      <ng-template swiperSlide>
+        <img [src]="slide" alt="Image du carrousel" class="carousel-image"/>
+      </ng-template>
+    </ng-container>
+
+  </swiper>
+
+</div>
